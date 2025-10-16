@@ -1,8 +1,6 @@
 package calculator;
 import camp.nextstep.edu.missionutils.Console;
 
-import java.util.Scanner;
-
 public class Application {
     public static void main(String[] args) {
         String str = Console.readLine();
@@ -11,9 +9,7 @@ public class Application {
 
         String numbers =  delimiterStrategy.extractNumbers(str);
 
-        if(!Validator.isValid(numbers, str)) {
-            throw new IllegalArgumentException();
-        }
+        Validator.doValidation(numbers, str);
 
         int result = Calculator.sum(numbers);
         System.out.println("결과 : "+result);

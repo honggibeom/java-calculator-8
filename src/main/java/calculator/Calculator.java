@@ -1,7 +1,7 @@
 package calculator;
 
 public class Calculator {
-    static int sum(String str) {
+    public static int sum(String str) {
         int sum = 0;
         for (String num : str.split(" ")) {
             if (!num.isBlank()) sum += Integer.parseInt(num);
